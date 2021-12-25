@@ -10,9 +10,12 @@ componentDidMount() {
         this.setState({inputQuestion:question,inputAnswer:answer,card:this.props.card})
 }
 handleOnChange=(e)=>{
+
          const { name, value } = e.target
+    if(e.currentTarget.keyCode==='Enter') console.log('enter')
         this.setState({[name]:value})
 }
+
 
 
     updateLocalStorage=(allCards)=>{

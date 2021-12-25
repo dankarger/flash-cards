@@ -17,18 +17,18 @@ class Card extends React.Component {
        if(this.props.side){
            return(
                <div className={this.props.class}>
-               <div className='card question'>
-                   question:
-                   <h2>{this.props.card.question}</h2>
+               <div className='card question show-card'>
+                   <h2>question:</h2>
+                   <h3>{this.props.card.question}</h3>
                </div>
                </div>
            )
        }else {
            return(
                <div className={this.props.class}>
-               <div className='card answer'>
-                   answer:
-                   <h2>{this.props.card.answer}</h2>
+               <div className='card answer show-card'>
+                  <h2> answer:</h2>
+                   <h3>{this.props.card.answer}</h3>
                </div>
                </div>
 
