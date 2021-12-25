@@ -3,7 +3,7 @@ import './FlashApp.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import ShowCardPage from "../../pages/ShowCardPage/ShowCardPage";
-
+import HomePage from "../../pages/HomePage/HomePage";
 
 class FlashApp extends React.Component {
 
@@ -16,7 +16,7 @@ class FlashApp extends React.Component {
             <div className='FlashCard-main'>
 
                 <BrowserRouter >
-                   <h1 className='Header'>Flash Card App</h1>
+
                     <Navbar />
 
                     <Routes>

@@ -13,6 +13,7 @@ class Navbar extends React.Component {
                     <div className="item">
                         <i className="fas fa-question-circle"></i>
                     </div>
+                    <Link to='/' className="item">Home</Link>
                     <Link to='/cards' className="item">Show Cards</Link>
                     <Link to='/manage' className="item">Manage Cards</Link>
                     {/*<div className="filler-div"> </div>*/}
