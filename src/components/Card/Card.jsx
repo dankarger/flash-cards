@@ -13,27 +13,28 @@ class Card extends React.Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
     }
 
-
     injectCard=()=>{
        if(this.props.side){
            return(
-               <div className='card'>
+               <div className={this.props.class}>
+               <div className='card question'>
                    question:
                    <h2>{this.props.card.question}</h2>
+               </div>
                </div>
            )
        }else {
            return(
-               <div className='card'>
+               <div className={this.props.class}>
+               <div className='card answer'>
                    answer:
                    <h2>{this.props.card.answer}</h2>
                </div>
+               </div>
+
            )
-
        }
-
     }
-
 
     render() {
 

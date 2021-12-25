@@ -1,0 +1,36 @@
+.Message {
+    width:80%;
+    height:100%;
+    margin:2rem;
+
+
+}
+.Message h1 {
+    color: #c72222;
+}
+
+.fade-in {
+    animation: fade-in 500ms ease-in forwards;
+}
+
+.fade-out {
+    animation: fade-out 500ms ease-in forwards;
+}
+@keyframes fade-in {
+    from{opacity: 0}
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from{
+        opacity: 1;
+
+    }
+    to {
+        opacity: 0;
+    }
+
+}
+

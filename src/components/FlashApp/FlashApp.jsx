@@ -24,6 +24,7 @@ state={Alldata:[]}
                         <Route path='/' exact element={<HomePage />} />
                         <Route path='/cards' exact element={<ShowCardPage />} />
                         <Route path='/manage' exact element={<ManageCardsPage />} />
+                        <Route path='/add' exact element={<ManageCardsPage />} />
                         {/*<Route path='/products/:id' exact element={<ProductDetailWrapper callback={this.addCart} type='products'/>} />*/}
                         {/*<Route path='/clothes' exact element={<ClothesPage callback={this.addCart} />} />*/}
                         {/*<Route path='/clothes/:id' exact element={<ProductDetailWrapper callback={this.addCart}  type='clothes'/>} />*/}

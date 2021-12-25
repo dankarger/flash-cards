@@ -15,6 +15,7 @@ class Navbar extends React.Component {
                     <Link to='/' className="item">Home</Link>
                     <Link to='/cards' className="item">Show Cards</Link>
                     <Link to='/manage' className="item">Manage Cards</Link>
+                    <Link to='/add' className="item">Add Card</Link>
                     {/*<div className="filler-div"> </div>*/}
 
 

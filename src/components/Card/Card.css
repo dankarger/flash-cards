@@ -1,8 +1,62 @@
 .card {
     border: 2px solid #e76f51;
-    width:50%;
-    min-height:200px;
-    height: 20rem;
     padding:1rem;
     margin:0 auto;
+    transition: 100ms ease-in;
+    background: rgba(231, 111, 81, 0.42);
+    color: #264653;
+    text-shadow: 1px 1px 1px #e76f51;
+}
+
+
+.show-card{
+    margin:0 auto;
+    width:40%;
+    min-height:300px;
+    height:100%
+}
+.edit{
+    min-width:300px;
+    height:400px;
+    margin:1rem;
+    transition: 200ms ease-in;
+}
+.edit:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    opacity: 0.8;
+}
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+
+}
+
+.question {
+    background: rgba(244, 162, 97, 0.51);
+    animation: card-animation 200ms ease-in forwards;
+}
+.answer {
+    background: rgba(42, 157, 143, 0.47);
+    animation: card-animation  200ms ease-in backwards;
+}
+
+.animate{
+    animation: card-animation 200ms ease-in forwards;
+}
+.cancel {
+
+}
+
+@keyframes card-animation  {
+    from {
+        transform:scale(-2);
+    }
+    to{
+        transform:scale(1);
+    }
+
 }

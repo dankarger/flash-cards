@@ -1,0 +1,16 @@
+.EditWindow {
+    width:50%;
+    height:50%;
+    background: rgba(176, 189, 211, 0.82);
+    position: absolute;
+    top:20%;
+    left: 30%;
+    z-index: 200;
+    padding:2rem;
+    border:3px solid black;
+
+}
+
+.buttons-div {
+    margin-top:5rem;
+}
