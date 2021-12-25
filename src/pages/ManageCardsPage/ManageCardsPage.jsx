@@ -62,6 +62,7 @@ class ManageCardsPage extends React.Component {
                 }else if(card.id===this.state.currentCard.id) {
                     return currentCard
                 }
+                return card
             })
             this.setState({data:result},()=> this.updateLocalStorage(result))
             // this.updateLocalStorage(result)
