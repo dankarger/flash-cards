@@ -1,6 +1,6 @@
 import React from "react";
 import './ShowCardPage.css'
-import Data from "../../Data/data";
+// import Data from "../../Data/data";
 // import {CardClass} from "../../Data/data";
 import Card from "../../components/Card/Card";
 import {getData} from "../../Data/data";
@@ -23,7 +23,7 @@ class ShowCardPage extends React.Component {
     }
     showCard(){
             let index = this.state.currentCardIndex
-            let currentCardsList=this.state.currentCardsList
+            // let currentCardsList=this.state.currentCardsList
 
         let card =this.state.data[index]
         return (

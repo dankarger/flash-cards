@@ -6,14 +6,11 @@ class Card extends React.Component {
    state={card:{},question:'',answer:''}
 
     componentDidMount() {
-        // console.log('c111',this.props.card )
         let card =this.props.card
-        // console.log('card2',card)
         this.setState({card:card},()=>this.setState({card:this.props.card}) )
 
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        // console.log('ca',this.state.card )
     }
 
 
@@ -39,7 +36,7 @@ class Card extends React.Component {
 
 
     render() {
-        const {card}= this.props
+
         return(
             <div >
 
