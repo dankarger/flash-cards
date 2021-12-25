@@ -18,10 +18,11 @@ class ShowCardPage extends React.Component {
         }
 
     componentDidMount() {
-
         getData().then(res=>  {
             let shuffledCards = this.shuffle(res.data)
-            this.setState({data:shuffledCards})})
+
+            // this.setState({data:shuffledCards})})
+        this.setState({data:res})})
 
             }
     toggleCardSide=()=>{
@@ -74,7 +75,7 @@ class ShowCardPage extends React.Component {
         this.setState({isMessage:!this.state.isMessage})
     }
     handleStartOverButton=()=>{
-            this.setState({ data:Data,
+            this.setState({ data:getData(),
                     currentCardsList:[],
                     isQuestion:true,
                     currentCardIndex:0,
@@ -87,18 +88,18 @@ class ShowCardPage extends React.Component {
     }
 
       shuffle(array) {
-        let currentIndex = array.length,  randomIndex;
-        // While there remain elements to shuffle...
-        while (currentIndex !== 0) {
-
-            // Pick a remaining element...
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-
-            // And swap it with the current element.
-            [array[currentIndex], array[randomIndex]] = [
-                array[randomIndex], array[currentIndex]];
-        }
+        // let currentIndex = array.length,  randomIndex;
+        // // While there remain elements to shuffle...
+        // while (currentIndex !== 0) {
+        //
+        //     // Pick a remaining element...
+        //     randomIndex = Math.floor(Math.random() * currentIndex);
+        //     currentIndex--;
+        //
+        //     // And swap it with the current element.
+        //     [array[currentIndex], array[randomIndex]] = [
+        //         array[randomIndex], array[currentIndex]];
+        // }
         return array;
     }
 
