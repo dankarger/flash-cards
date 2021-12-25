@@ -6,11 +6,11 @@
     background: rgba(231, 111, 81, 0.42);
     color: #264653;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     text-shadow: 1px 1px 1px #e76f51;
-    padding-top:2rem;
+    padding:2rem;
 }
 
 
