@@ -11,6 +11,7 @@
     flex-direction: column;
     text-shadow: 1px 1px 1px #e76f51;
     padding:2rem;
+    border-radius: 10px;
 }
 
 
