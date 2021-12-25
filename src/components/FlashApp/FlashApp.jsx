@@ -11,7 +11,7 @@ import {getData} from "../../Data/data";
 class FlashApp extends React.Component {
 state={Alldata:[]}
  componentDidMount() {
-     this.setState({Alldata:getData()})
+     // this.setState({Alldata:getData()})
  }
 
     render() {

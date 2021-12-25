@@ -31,7 +31,7 @@ class ShowCardPage extends React.Component {
     handleNextCardButton=()=>{
         let index = this.state.currentCardIndex
         if(index<this.state.data.length-1) {
-            this.setState((prev)=>{return{currentCardIndex:prev.currentCardIndex+1,isQuestion:true}})
+            this.setState((prev)=>{return{currentCardIndex:prev.currentCardIndex+1,isQuestion:true}},()=>console.log(this.state.currentCardIndex))
             }else {
             this.handleEndOfCards()
         }
@@ -92,15 +92,18 @@ class ShowCardPage extends React.Component {
         let currentIndex = array.length,  randomIndex;
         // While there remain elements to shuffle...
         while (currentIndex !== 0) {
+
             // Pick a remaining element...
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex--;
+
             // And swap it with the current element.
             [array[currentIndex], array[randomIndex]] = [
                 array[randomIndex], array[currentIndex]];
         }
         return array;
     }
+
 
     render(){
         return(
