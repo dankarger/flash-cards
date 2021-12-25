@@ -64,11 +64,11 @@ class ManageCardsPage extends React.Component {
                 }
                 return card
             })
-            this.setState({data:result},()=> this.updateLocalStorage(result))
+            this.setState({data:result,isEdit:false},()=> this.updateLocalStorage(result))
             // this.updateLocalStorage(result)
         }else{
             allData.push(currentCard)
-            this.setState({data:allData},()=> this.updateLocalStorage(allData))
+            this.setState({data:allData,isEdit:false},()=> this.updateLocalStorage(allData))
             // this.updateLocalStorage(allData)
         }
     }
