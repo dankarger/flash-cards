@@ -15,21 +15,17 @@ class Navbar extends React.Component {
                     <Link to='/' className="item">Home</Link>
                     <Link to='/cards' className="item">Show Cards</Link>
                     <Link to='/manage' className="item">Manage Cards</Link>
-                    <Link to='/add' className="item">Add Card</Link>
-                    {/*<div className="filler-div"> </div>*/}
+                    {/*<Link to='/add' className="item">Add Card</Link>*/}
 
 
                 </div>
-                {/*<div> <Cart /></div>*/}
                 <div className="ui bottom fixed menu">
                     <div>Footer</div>
                     <div className="item">
-                        {/*<img src="/images/logo.png"/>*/}
                     </div>
-                    {/*<div> <Cart /></div>*/}
                 </div>
-                <p></p>
-                <p></p>
+                <p> </p>
+                <p> </p>
             </div>
         )
     }
