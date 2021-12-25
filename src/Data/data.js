@@ -1,26 +1,26 @@
 const Data = [
     {
         id: 1,
-        question:"her",
-        answer:'dasd',
+        question:"What is your favourite color?",
+        answer:'Blue',
         isRead:false,
     },
     {
         id: 2,
-        question:"hee2e2e2e",
-        answer:'dasde2e2e2ee',
+        question:"What time is it?",
+        answer:'12:00',
         isRead:false,
     },
     {
         id: 3,
-        question:"thhee ht hthh  2e",
-        answer:'da sd  e2  e    2e2ee',
+        question:"Is Green a Color?",
+        answer:'Yes',
         isRead:false,
     },
     {
         id: 4,
-        question:"1111",
-        answer:'cce',
+        question:"2+2?",
+        answer:'4',
         isRead:false,
     },
 ]
