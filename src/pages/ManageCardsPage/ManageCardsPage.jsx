@@ -47,9 +47,9 @@ class ManageCardsPage extends React.Component {
 
 
     }
-    handleSubmitButton=  (inputQuestion,inputAnswer,type)=>{
+    handleSubmitButton=  async (inputQuestion,inputAnswer,type)=>{
         // const{inputQuestion,inputAnswer}=this.props
-        let allData=    getData();
+        let allData=  await  getData();
         let currentCard={
             id:this.state.currentCard.id,
             question:inputQuestion,
@@ -58,18 +58,20 @@ class ManageCardsPage extends React.Component {
         console.log(allData)
         if(type==='Edit'){
             let result = allData.map(card=>{
-                if(card.id!==this.state.card.id){
+                if(card.id!==this.state.currentCard.id){
                     return card
-                }else if(card.id===this.state.card.id) {
+                }else if(card.id===this.state.currentCard.id) {
                     return currentCard
                 }
             })
-            this.updateLocalStorage(result)
+            this.setState({data:result},()=> this.updateLocalStorage(result))
+            // this.updateLocalStorage(result)
             console.log('r',result)
         }else{
             allData.push(currentCard)
             console.log('add',allData)
-            this.updateLocalStorage(allData)
+            this.setState({data:allData},()=> this.updateLocalStorage(allData))
+            // this.updateLocalStorage(allData)
         }
     }
     updateLocalStorage=(allCards)=>{

@@ -79,7 +79,12 @@ handleOnChange=(e)=>{
                             </div>
                         </div>
                         <div className='buttons-div'>
-                            <Button callback={()=>this.props.callbackSubmit(this.state.inputQuestion,this.state.inputAnswer,this.props.type)} className='ui submit button' name='Submit' />
+                            <Button callback={()=>{
+                                this.props.callbackSubmit(this.state.inputQuestion,this.state.inputAnswer,this.props.type)
+                                this.setState({inputQuestion:'',inputAnswer:''})
+                            }
+
+                            } className='ui submit button' name='Submit' />
                             <Button callback={this.props.callback} className='ui cancel button' name='Cancel' />
                             <Button callback={this.props.callbackDelete} className='ui cancel button' name='Delete' />
 
