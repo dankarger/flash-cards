@@ -1,7 +1,6 @@
 import React from "react";
 import './EditWindow.css'
 import Button from "../Button/Button";
-import {getData} from "../../Data/data";
 
 class EditWindow extends React.Component {
     state={card:{},inputQuestion:'',inputAnswer:''}
@@ -14,41 +13,6 @@ handleOnChange=(e)=>{
          const { name, value } = e.target
         this.setState({[name]:value})
 }
-// handleSubmitButton= async ()=>{
-//         const{inputQuestion,inputAnswer}=this.state
-//     let allData=   await getData();
-//     let currentCard={
-//         id:this.state.card.id,
-//         question:inputQuestion,
-//         answer:inputAnswer
-//     }
-//     console.log(allData)
-//     if(this.props.type==='Edit'){
-//         let result = allData.map(card=>{
-//             if(card.id!==this.state.card.id){
-//                 return card
-//             }else if(card.id===this.state.card.id) {
-//                 return currentCard
-//             }
-//         })
-//         this.updateLocalStorage(result)
-//         console.log('r',result)
-//     }else{
-//         allData.push(currentCard)
-//         console.log('add',allData)
-//         this.updateLocalStorage(allData)
-//     }
-//
-//
-// }
-    // handleDeleteButton= async ()=>{
-    //     let allData=    await getData();
-    //     let allcards= allData.filter(card=>{
-    //         return card.id!==this.state.card.id
-    //     })
-    //     this.state.
-    //     this.updateLocalStorage(allcards)
-    // }
 
 
     updateLocalStorage=(allCards)=>{

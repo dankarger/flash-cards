@@ -43,7 +43,6 @@ class ManageCardsPage extends React.Component {
     handleAddCardButton=()=>{
         let newCard=new CardClass('','')
         this.setState({isEdit:!this.state.isEdit,currentCard:newCard,type:'Add'})
-        // this.setState({data:allcards},()=> this.updateLocalStorage(allcards))
 
 
     }
