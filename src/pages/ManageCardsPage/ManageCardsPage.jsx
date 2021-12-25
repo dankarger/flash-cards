@@ -23,7 +23,7 @@ class ManageCardsPage extends React.Component {
             let allcards= allData.filter(card=>{
                 return card.id!==this.state.currentCard.id
             })
-            this.setState({data:allcards},()=> this.updateLocalStorage(allcards))
+            this.setState({data:allcards,isEdit:false},()=> this.updateLocalStorage(allcards))
 
         }
 
