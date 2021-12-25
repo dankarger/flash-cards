@@ -107,7 +107,7 @@ class ShowCardPage extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className='main'>
                 {this.state.isMessage && this.injectMessage()}
                 {this.showCard()}
 
