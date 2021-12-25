@@ -28,10 +28,11 @@ export default Data
 
 
 export const getData = async ()=>{
+    if(localStorage){
     const localCards =  localStorage.getItem('flash_Cards') ;
-
-
     return JSON.parse(localCards)
+    }
+    return Data
 }
 export class CardClass {
     constructor(question,answer) {
