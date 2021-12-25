@@ -19,7 +19,7 @@ class ShowCardPage extends React.Component {
 
     componentDidMount() {
         getData().then(res=>  {
-            let shuffledCards = this.shuffle(res.data)
+            // let shuffledCards = this.shuffle(res.data)
 
             // this.setState({data:shuffledCards})})
         this.setState({data:res})})
