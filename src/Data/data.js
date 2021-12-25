@@ -28,8 +28,9 @@ export default Data
 
 
 export const getData = async ()=>{
-    if(localStorage){
+
     const localCards =  localStorage.getItem('flash_Cards') ;
+    if(localCards){
     return JSON.parse(localCards)
     }
     return Data

@@ -1,6 +1,6 @@
 import React from "react";
 import './ShowCardPage.css'
-// import Data from "../../Data/data";
+import Data from "../../Data/data";
 // import {CardClass} from "../../Data/data";
 import Card from "../../components/Card/Card";
 import {getData} from "../../Data/data";
@@ -8,8 +8,7 @@ import Button from "../../components/Button/Button";
 import Message from "../../components/Message/Mesage";
 
 class ShowCardPage extends React.Component {
-        state={data:[{id:1,question:'',
-                answer:''}],
+        state={data:Data,
             currentCardsList:[],
             isQuestion:true,
             currentCardIndex:0,
@@ -75,8 +74,7 @@ class ShowCardPage extends React.Component {
         this.setState({isMessage:!this.state.isMessage})
     }
     handleStartOverButton=()=>{
-            this.setState({ data:[{id:1,question:'',
-                        answer:''}],
+            this.setState({ data:Data,
                     currentCardsList:[],
                     isQuestion:true,
                     currentCardIndex:0,
