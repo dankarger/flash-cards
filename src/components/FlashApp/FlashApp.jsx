@@ -8,7 +8,7 @@ import ManageCardsPage from "../../pages/ManageCardsPage/ManageCardsPage";
 
 
 class FlashApp extends React.Component {
-state={Alldata:[]}
+
 
 
     render() {

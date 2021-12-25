@@ -21,7 +21,7 @@ class ShowCardPage extends React.Component {
     componentDidMount() {
 
         getData().then(res=>  {
-            let shuffledCards = this.shuffle(res)
+            let shuffledCards = this.shuffle(res.data)
             this.setState({data:shuffledCards})})
 
             }
@@ -75,8 +75,8 @@ class ShowCardPage extends React.Component {
         this.setState({isMessage:!this.state.isMessage})
     }
     handleStartOverButton=()=>{
-            this.setState({ data:[{id:1,question:'fsdf',
-                        answer:'sdf'}],
+            this.setState({ data:[{id:1,question:'',
+                        answer:''}],
                     currentCardsList:[],
                     isQuestion:true,
                     currentCardIndex:0,
