@@ -1,0 +1,23 @@
+#navBar {
+    background: #2a9d8f;
+    color:#264653;
+    font-family:Verdana,sans-serif;
+    box-shadow: 2px 2px 20px grey;
+
+}
+
+#navBar .item {
+    color:whitesmoke;
+    text-shadow: 1px 1px #264653;
+    transition: 200ms ease-in;
+}
+
+#navBar .item:hover {
+    filter: brightness(150%);
+    background: rgba(36, 49, 48, 0.18);
+}
+
+#navBar .item {
+    color:whitesmoke;
+    text-shadow: 1px 1px #264653;
+}

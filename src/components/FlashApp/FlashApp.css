@@ -1,0 +1,14 @@
+.FlashCard-main {
+    background: #e9c46a;
+    width:100vw;
+    height: 100vh;
+    font-family:Verdana,sans-serif;
+    padding-top:4rem;
+}
+.Header {
+    font-family:Verdana,sans-serif;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    color: #cceaf1;
+    text-shadow: 1px 1px 7px black;
+}

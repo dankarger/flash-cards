@@ -1,0 +1,7 @@
+.add-to-cart-button {
+   transform: translateX(150px) translateY(-45px);
+    top:0;
+    background: limegreen;
+    color:green
+
+}
