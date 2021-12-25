@@ -19,9 +19,10 @@ class ShowCardPage extends React.Component {
         }
 
     componentDidMount() {
-            // console.log('gfgfggfsdfg',this.props.data)
-        // console.log('dasd',getData())
-        getData().then(res=>   this.setState({data:res}))
+
+        getData().then(res=>  {
+            let shuffledCards = this.shuffle(res)
+            this.setState({data:shuffledCards})})
 
             }
     toggleCardSide=()=>{
@@ -30,7 +31,7 @@ class ShowCardPage extends React.Component {
     handleNextCardButton=()=>{
         let index = this.state.currentCardIndex
         if(index<this.state.data.length-1) {
-            this.setState((prev)=>{return{currentCardIndex:prev.currentCardIndex+1,isQuestion:true}},()=>console.log(this.state.currentCardIndex))
+            this.setState((prev)=>{return{currentCardIndex:prev.currentCardIndex+1,isQuestion:true}})
             }else {
             this.handleEndOfCards()
         }
@@ -43,7 +44,6 @@ class ShowCardPage extends React.Component {
     }
     showCard(){
             let index = this.state.currentCardIndex
-        console.log(this.state.data.length)
             // let currentCardsList=this.state.currentCardsList
         if(index>this.state.data.length-1) {
             this.handleEndOfCards()
@@ -53,7 +53,6 @@ class ShowCardPage extends React.Component {
         return (
             <div className={this.state.isEndOfCards?'hide':'show'}>
                 <div>
-
                     <Card class='show-card' card={card} side={this.state.isQuestion}/>
                 </div>
                 <Button callback={this.toggleCardSide} name="Reveal Answer" />
@@ -84,8 +83,23 @@ class ShowCardPage extends React.Component {
                     isMessage:false,
                     message:'Well Done,You Finished the cards',
                     isEndOfCards:false})
+        getData().then(res=>  {
+            let shuffledCards = this.shuffle(res)
+            this.setState({data:shuffledCards})})
+    }
 
-        getData().then(res=>   this.setState({data:res}))
+      shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+        return array;
     }
 
     render(){

@@ -66,10 +66,8 @@ class ManageCardsPage extends React.Component {
             })
             this.setState({data:result},()=> this.updateLocalStorage(result))
             // this.updateLocalStorage(result)
-            console.log('r',result)
         }else{
             allData.push(currentCard)
-            console.log('add',allData)
             this.setState({data:allData},()=> this.updateLocalStorage(allData))
             // this.updateLocalStorage(allData)
         }

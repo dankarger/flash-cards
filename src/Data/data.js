@@ -28,13 +28,8 @@ export default Data
 
 
 export const getData = async ()=>{
-   // const data = await Data
     const localCards =  localStorage.getItem('flash_Cards') ;
-    console.log(JSON.parse(localCards))
 
-    // if(localCards) {
-    //     this.setState({cart: JSON.parse(localCards)})
-    // }
 
     return JSON.parse(localCards)
 }
@@ -46,11 +41,3 @@ export class CardClass {
         this.isSeen=false
     }
 }
-
-// const localCart =  localStorage.getItem('Cart') ;
-// console.log(JSON.parse(localCart))
-//
-// if(localCart) {
-//     this.setState({cart: JSON.parse(localCart)})
-// }
-//

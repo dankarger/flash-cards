@@ -20,7 +20,6 @@ handleOnChange=(e)=>{
 
     updateLocalStorage=(allCards)=>{
         localStorage.setItem('flash_Cards', JSON.stringify(allCards));
-        console.log(localStorage)
     }
 
     render() {
