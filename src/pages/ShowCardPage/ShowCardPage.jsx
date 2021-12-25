@@ -75,7 +75,7 @@ class ShowCardPage extends React.Component {
         this.setState({isMessage:!this.state.isMessage})
     }
     handleStartOverButton=()=>{
-            this.setState({ data:getData(),
+            this.setState({ data:Data,
                     currentCardsList:[],
                     isQuestion:true,
                     currentCardIndex:0,
