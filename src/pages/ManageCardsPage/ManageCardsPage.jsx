@@ -16,14 +16,12 @@ class ManageCardsPage extends React.Component {
         this.setState({isEdit:!this.state.isEdit,currentCard:card,type:'Edit'})
 
 }
-
         handleDeleteButton= async ()=>{
             let allData=    await getData();
             let allcards= allData.filter(card=>{
                 return card.id!==this.state.currentCard.id
             })
             this.setState({data:allcards,isEdit:false},()=> this.updateLocalStorage(allcards))
-
         }
 
     injectCard=()=>{
