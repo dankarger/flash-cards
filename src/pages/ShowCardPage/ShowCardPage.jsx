@@ -79,11 +79,11 @@ class ShowCardPage extends React.Component {
                     isMessage:false,
                     message:'Well Done,You Finished the cards',
                     isEndOfCards:false})
-        getData().then(res=>  {
+        // getData().then(res=>  {
             // let shuffledCards = this.shuffle(res)
 
             // this.setState({data:shuffledCards})})
-        this.setState({data:res})})
+        // this.setState({data:res})})
     }
 
       shuffle=async (array)=> {
