@@ -1,7 +1,6 @@
 import React from "react";
 import './ShowCardPage.css'
 import Data from "../../Data/data";
-// import {CardClass} from "../../Data/data";
 import Card from "../../components/Card/Card";
 import {getData} from "../../Data/data";
 import Button from "../../components/Button/Button";
@@ -20,7 +19,6 @@ class ShowCardPage extends React.Component {
     componentDidMount() {
         getData().then(res=>  {
             // let shuffledCards = this.shuffle(res.data)
-
             // this.setState({data:shuffledCards})})
         this.setState({data:res})})
 
@@ -44,7 +42,6 @@ class ShowCardPage extends React.Component {
     }
     showCard(){
             let index = this.state.currentCardIndex
-            // let currentCardsList=this.state.currentCardsList
         if(index>this.state.data.length-1) {
             this.handleEndOfCards()
             return
@@ -87,7 +84,7 @@ class ShowCardPage extends React.Component {
             this.setState({data:shuffledCards})})
     }
 
-      shuffle(array) {
+      shuffle=async (array)=> {
         // let currentIndex = array.length,  randomIndex;
         // // While there remain elements to shuffle...
         // while (currentIndex !== 0) {

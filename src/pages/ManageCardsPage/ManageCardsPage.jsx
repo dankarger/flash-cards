@@ -4,7 +4,6 @@ import {CardClass, getData} from "../../Data/data";
 import EditCard from "../../components/Card/EditCard";
 import EditWindow from "../../components/EditWindow/EditWindow";
 import Button from "../../components/Button/Button";
-// import Card from "../../components/Card/Card";
 
 class ManageCardsPage extends React.Component {
     state={data:[],isEdit:false,currentCard:null,type:''}
@@ -47,7 +46,6 @@ class ManageCardsPage extends React.Component {
 
     }
     handleSubmitButton=  async (inputQuestion,inputAnswer,type)=>{
-        // const{inputQuestion,inputAnswer}=this.props
         let allData=  await  getData();
         let currentCard={
             id:this.state.currentCard.id,
@@ -65,11 +63,9 @@ class ManageCardsPage extends React.Component {
                 return card
             })
             this.setState({data:result,isEdit:false},()=> this.updateLocalStorage(result))
-            // this.updateLocalStorage(result)
         }else{
             allData.push(currentCard)
             this.setState({data:allData,isEdit:false},()=> this.updateLocalStorage(allData))
-            // this.updateLocalStorage(allData)
         }
     }
     updateLocalStorage=(allCards)=>{
